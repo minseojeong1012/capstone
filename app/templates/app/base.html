@@ -1,3 +1,4 @@
+{% load django_bootstrap5 %}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -5,17 +6,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>장고 입문</title>
+    <title>생성형 AI기반의 CX(고객경험) AI 솔루션</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
 <body>
-
-    <h1>장고 입문</h1>
-
-    {% block content %}
-    {% endblock %}
-
-    <hr />
-    &copy; 2024. 정민서.
-
+    <div class = "container">
+        <h1>생성형 AI기반의 CX(고객경험) AI 솔루션</h1>
+        {% block content %}
+        {% endblock %}
+        <hr />
+        &copy; 2024. 장아찌캡스톤.
+    </div>
 </body>
 </html>
