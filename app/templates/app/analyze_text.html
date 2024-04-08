@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>텍스트 분석</h2>
+  <form method="post" action="{% url 'app:analyze_text' %}">
+    {% csrf_token %}
+    <textarea name="text" rows="5"></textarea>
+    <br>
+    <input type="submit" value="분석하기">
+  </form>
+{% endblock %}

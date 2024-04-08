@@ -1,0 +1,7 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>분석 결과</h2>
+  <p>{{ analysis }}</p>
+  <a href="{% url 'app:analyze_text' %}">다시 분석하기</a>
+{% endblock %}
