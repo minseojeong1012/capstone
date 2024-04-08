@@ -40,13 +40,13 @@ GPT_API_KEY = os.environ.get("GPT_API_KEY", "YOUR_DEFAULT_API_KEY")
 
 openai.api_key = GPT_API_KEY
 
-USER_PROMPT = os.environ.get("USER_PROMPT", "")
-
 
 def analyze_text(request):
     if request.method == "POST":
         text = request.POST.get("text")
-        prompt = USER_PROMPT + text
+
+        # 프롬프트 수정
+        prompt = "다음 텍스트를 요약해주세요: " + text
 
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo", messages=[{"role": "user", "content": prompt}]
